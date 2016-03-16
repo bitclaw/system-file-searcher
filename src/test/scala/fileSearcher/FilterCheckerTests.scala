@@ -14,4 +14,12 @@ class FilterCheckerTests extends FlatSpec{
     val matchedFiles = new FilterChecker("match").findMatchedFiles(listOfFiles)
     assert(matchedFiles == List(matchingFile))
   }
+
+  "FilterCheckerTests passed a list with a directory that matches the filter" should
+    "should not return the directory" in {
+    val listOfIOObjects = List(new FileObject("random"),new DirectoryObject("match"))
+    val matchedFiles = new FilterChecker("match").findMatchedFiles(listOfIOObjects)
+    assert(matchedFiles.length == 0)
+  }
+
 }
