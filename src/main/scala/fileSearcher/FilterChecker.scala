@@ -8,7 +8,7 @@ package fileSearcher
  */
 class FilterChecker(filter : String) {
 
-  def matches(content : String) = content.contains(filter)
+  def matches(content : String) = content contains filter
 
   def findMatchedFiles(IOObjects : List[IOObject]) =
     for(iOObject <- IOObjects
