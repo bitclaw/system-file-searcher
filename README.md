@@ -32,4 +32,17 @@ Although ScalaTest recommends FlatSpec (BDD Style)
 
 The `==` checks object equality and not reference equality. For reference the method is .eq .
 
+To run scala tests use the following command:
+
+`sbt test`
+
+If you want sbt to listen for changes so you don't have to manually run the command each time , then do:
+
+```shell
+sbt
+~test
+```
+
+
+
 
