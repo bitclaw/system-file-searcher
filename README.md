@@ -28,5 +28,8 @@ http://www.scalatest.org/user_guide/selecting_a_style
 
 Although ScalaTest recommends FlatSpec (BDD Style)
 
+## Scala equality
+
+The `==` checks object equality and not reference equality. For reference the method is .eq .
 
 

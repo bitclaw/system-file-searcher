@@ -3,8 +3,15 @@ package fileSearcher
 import org.scalatest.FlatSpec
 
 /**
- * Created by bitclaw on 3/16/16.
+ * Test class for System File Searcher implementation
  */
 class FilterCheckerTests extends FlatSpec{
 
+  "FilterCheckerTests passed a list where one file matches the filter" should
+  "return a list with that file" in {
+    val matchingFile = new FileObject("match")
+    val listOfFiles = List(new FileObject("random"), matchingFile)
+    val matchedFiles = new FilterChecker("match").findMatchedFiles(listOfFiles)
+    assert(matchedFiles == List(matchingFile))
+  }
 }
