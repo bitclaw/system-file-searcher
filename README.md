@@ -43,6 +43,10 @@ sbt
 ~test
 ```
 
+## Scala Object Construct
+
+A Scala object is a way to create a singleton or static class that can have methods called directly
+
 
 
 
